@@ -101,28 +101,28 @@
     <section aria-labelledby="testimonials-heading">
         <h2 id="testimonials-heading">Testimonials</h2>
         <article>
-            <h3>Miranda Blake</h3>
             <img src="miranda-blake-M.png" alt="Photo of Miranda Blake">
+            <h3>Miranda Blake</h3>
             <p>Traveling From: London, England</p>
-            <blockquote>“I traveled here for business, but my stay was extended. Now it is my home.”</blockquote>
+            <q>I traveled here for business, but my stay was extended. Now it is my home.</q>
         </article>
         <article>
-            <h3>Max Winter</h3>
             <img src="max-winter-M.png" alt="Photo of Max Winter">
+            <h3>Max Winter</h3>
             <p>Traveling From: Berlin, Germany</p>
-            <blockquote>“Great escape from my reality. Beautiful sunsets, wonderful people, great beer. ”</blockquote>
+            <q>Great escape from my reality. Beautiful sunsets, wonderful people, great beer.</q>
         </article>
         <article>
-            <h3>Inés Villegoes</h3>
             <img src="ines-villegoes-M.png" alt="Photo of Inés Villegoes">
+            <h3>Inés Villegoes</h3>
             <p>Traveling From: Barcelona, Spain</p>
-            <blockquote>“A very safe environment for all travelers.”</blockquote>
+            <q>A very safe environment for all travelers.</q>
         </article>
         <article>
-            <h3>Carmen Lorenzo</h3>
             <img src="carmen-lorenzo-M.png " alt="Photo of Carmen Lorenzo">
+            <h3>Carmen Lorenzo</h3>
             <p>Traveling From: Madrid, Spain</p>
-            <blockquote>“Live, laugh, love-- everything you need in Majorca.”</blockquote>
+            <q>Live, laugh, love-- everything you need in Majorca.</q>
         </article>
     </section>
     <section aria-labelledby="about-destination-heading">
@@ -176,24 +176,27 @@
         <h2 id="contact-heading">Contact Us</h2>
         <form>
             <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first-name" placeholder="Enter first name" required>
+            <input type="text" id="first-name" name="first-name" required>
     
             <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last-name" placeholder="Enter last name" required>
+            <input type="text" id="last-name" name="last-name"  required>
+            
     
-            <label for="contact-method">Contact Method</label>
-            <select id="contact-method" name="contact-method" required>
-              <option value="" disabled selected>Select a contact method</option>
-              <option value="email">Email</option>
-              <option value="text">Text</option>
-              <option value="phone">Phone</option>
-            </select>
+            <fieldset>
+                <legend>Contact Method<span>*</span></legend>
+                <input type="radio" name="contactPref" id="prefEmail" required>
+                <label for="prefEmail">Email</label>
+                <input type="radio" name="contactPref" id="prefText">
+                <label for="prefText">Text</label>
+                <input type="radio" name="contactPref" id="prefPhone">
+                <label for="prefPhone">Phone</label>
+            </fieldset>
     
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter email" required>
+            <input type="email" id="email" name="email" required>
     
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
+            <input type="tel" id="phone" name="phone">
     
             <label for="destination">Destination</label>
             <select id="destination" name="destination" required>
@@ -208,8 +211,8 @@
               <option value="valencia">Valencia</option>
             </select>
     
-            <label for="travel-time">Travel Time</label>
-            <select id="travel-time" name="travel-time" required>
+            <label for="travelTime">Travel Time<span>*</span></label>
+            <select name="travelTime" id="travelTime" required>
               <option value="" disabled selected>Select a season</option>
               <option value="fall">Fall</option>
               <option value="winter">Winter</option>
@@ -218,13 +221,13 @@
               <option value="flexible">Flexible</option>
             </select>
     
-            <button type="submit">Submit</button>
+            <button type="submit">Submit Form</button>
           </form>
         </section>
 
     </main>
     <footer>
-        <p>&copy; 2021 Wunderlust</p>
+        <p>Copyright &copy; 2021 Wunderlust</p>
         <a href="#">Privacy Statement</a>
         <a href="#">Terms of Service</a>
     </footer>
